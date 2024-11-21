@@ -1,5 +1,5 @@
 header {
-  padding: 10px;
+  padding: 20px 40px 0px 40px;
   justify-content: space-between;
   display: flex;
   text-align: center;
@@ -9,4 +9,9 @@ header {
 div {
   display: flex;
   gap: 30px;
+}
+
+h1,
+p {
+  color: #f6fcdf;
 }

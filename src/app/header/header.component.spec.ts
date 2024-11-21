@@ -8,9 +8,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent]
-    })
-    .compileComponents();
+      imports: [HeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
@@ -19,5 +18,11 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have a heading with a text of "Firetrack"', () => {
+    const bannerElement: HTMLElement = fixture.nativeElement;
+    const h1 = bannerElement.querySelector('h1')!;
+    expect(h1.textContent).toEqual('Firetrack');
   });
 });
