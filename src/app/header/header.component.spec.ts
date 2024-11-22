@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
@@ -21,8 +20,8 @@ describe('HeaderComponent', () => {
   });
 
   it('should have a heading with a text of "Firetrack"', () => {
-    const bannerElement: HTMLElement = fixture.nativeElement;
-    const h1 = bannerElement.querySelector('h1')!;
+    const headingElement: HTMLElement = fixture.debugElement.nativeElement;
+    const h1 = headingElement.querySelector('h1')!;
     expect(h1.textContent).toEqual('Firetrack');
   });
 });
