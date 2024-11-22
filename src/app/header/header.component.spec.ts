@@ -19,9 +19,21 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a heading with a text of "Firetrack"', () => {
+  it('should display a heading with a text of "Firetrack"', () => {
     const headingElement: HTMLElement = fixture.debugElement.nativeElement;
     const h1 = headingElement.querySelector('h1')!;
     expect(h1.textContent).toEqual('Firetrack');
+  });
+
+  it('should display a paragraph with a text of "Maps"', () => {
+    const headingElement: HTMLElement = fixture.debugElement.nativeElement;
+    const pArray = headingElement.querySelectorAll('p')!;
+    expect(pArray.forEach((el) => el.textContent === 'Maps'));
+  });
+
+  it('should display a paragraph with a text of "About"', () => {
+    const headingElement: HTMLElement = fixture.debugElement.nativeElement;
+    const pArray = headingElement.querySelectorAll('p')!;
+    expect(pArray.forEach((el) => el.textContent === 'About'));
   });
 });
